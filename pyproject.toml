@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "signal-library"
-version = "0.1.0.dev0"
+version = "0.1.0.dev1"
 description = "書籍の登録・OCR・校正・読書用HTML/PDFを管理するローカルツール"
 license = "MIT"
 license-files = ["LICENSE"]

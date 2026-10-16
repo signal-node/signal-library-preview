@@ -31,18 +31,22 @@ def main():
         with zipfile.ZipFile(candidate['archive']) as archive:
             assert set(archive.namelist())=={'signal-library/'+name for name in files}
             assert all(archive.read('signal-library/'+name)==data for name,data in files.items())
+        # 開発checkoutだけに存在する資料への暗黙依存を、配布時に検出する。
+        # 全回帰は短いbuild/CLIと時間枠を分け、進捗をCIログへ残す。
+        subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-v'],
+                       cwd=stage,env=env,timeout=600,check=True)
         run([sys.executable,'-m','build','--no-isolation','--outdir',base/'packages'],stage,env)
         wheel=next((base/'packages').glob('*.whl'));sdist=next((base/'packages').glob('*.tar.gz'))
         with zipfile.ZipFile(wheel) as archive:
-            assert archive.read('signal_library-0.1.0.dev0.dist-info/licenses/LICENSE')==files['LICENSE']
-            metadata=archive.read('signal_library-0.1.0.dev0.dist-info/METADATA').decode('utf-8')
+            assert archive.read('signal_library-0.1.0.dev1.dist-info/licenses/LICENSE')==files['LICENSE']
+            metadata=archive.read('signal_library-0.1.0.dev1.dist-info/METADATA').decode('utf-8')
             assert 'License-Expression: MIT' in metadata and 'License-File: LICENSE' in metadata
-            assert all(name.startswith(('signal_library/','signal_library-0.1.0.dev0.dist-info/')) for name in archive.namelist())
+            assert all(name.startswith(('signal_library/','signal_library-0.1.0.dev1.dist-info/')) for name in archive.namelist())
             for name in archive.namelist():
                 if name.startswith('signal_library/'):
                     assert name.endswith('.py') and archive.read(name)==files['src/'+name]
         with tarfile.open(sdist,'r:gz') as archive:
-            members=archive.getmembers();prefix='signal_library-0.1.0.dev0/'
+            members=archive.getmembers();prefix='signal_library-0.1.0.dev1/'
             for member in members:
                 assert not member.issym() and not member.islnk()
                 if not member.isfile():continue
@@ -72,6 +76,7 @@ def main():
         assert all(p.read_bytes()==data for p,data in before.items())
         print(json.dumps({'status':'passed','source_files':len(files),'zip_sha256':candidate['archive_sha256'],
                           'sdist_complete':True,'wheel_source_bytes_match':True,'installed_cli':True,
+                          'candidate_regression_tests_passed':True,
                           'keyless_register_validate':True,'current_repository_overlap_rejected':True,
                           'license_status':manifest['license_status'],'license':manifest['license'],'release_ready':False}))
 

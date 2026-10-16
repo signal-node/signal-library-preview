@@ -1,6 +1,6 @@
 {
   "schema_version": "signal-library-candidate-1",
-  "version": "0.1.0.dev0",
+  "version": "0.1.0.dev1",
   "release_ready": false,
   "license_status": "adopted",
   "license": "MIT",
@@ -181,12 +181,12 @@
     },
     {
       "path": "MANIFEST.in",
-      "sha256": "f27494911a45f8580bbeb66f88f7b1704e2c63d31f5250111faee2da666d6164",
-      "bytes": 4902
+      "sha256": "69d1b7f6eab3bcf18c32319e0c0ff3353aaf63f9e8b56d14cb01be600218768a",
+      "bytes": 5066
     },
     {
       "path": "README.md",
-      "sha256": "a942c92cf0fccba3b52f32f45eba3d79cd17ba585ddf7cd8e63b4ad869d1c6e0",
+      "sha256": "391e3bc9a6720669f6eded37a5ab84fe9f1c42a997f26139ffa93c89a0ad9990",
       "bytes": 3512
     },
     {
@@ -276,7 +276,7 @@
     },
     {
       "path": "docs/distribution/README.md",
-      "sha256": "cb7edb783cbdff94060183122faa87b4249801c249b7c9692885ebdab69b724f",
+      "sha256": "f9d22dcc69ff105f9f74c37601e53a1ba0c49526b7953a97a0f2b1b220daecdb",
       "bytes": 3546
     },
     {
@@ -301,8 +301,8 @@
     },
     {
       "path": "docs/release-status.md",
-      "sha256": "6549a7b627d5bd13719927969ca860e446dca951b9e8b5889bed64ae4558a242",
-      "bytes": 4835
+      "sha256": "490f10e14dc78f907cdba75b4699fbafaf4665157be56006bef40dba109dc13c",
+      "bytes": 6009
     },
     {
       "path": "docs/setup.md",
@@ -326,7 +326,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "03413277ca43a7204d5a9b24dc62e488578c4d7b9167843072effd99e75ff09d",
+      "sha256": "b63521b1ff07df6dc4e537128d53a56eee49d2812f643997ab9c10aa88d729a3",
       "bytes": 510
     },
     {
@@ -346,7 +346,7 @@
     },
     {
       "path": "src/signal_library/__init__.py",
-      "sha256": "c7c6aad7318c52c9032d5d79ad890e7c4e25777d515d77cecc472508bed32abe",
+      "sha256": "c6b5a3a18c4fa9cc98e44d86f181ab3adaf76d8becfec93e5cf478e794be6609",
       "bytes": 64
     },
     {
@@ -725,9 +725,19 @@
       "bytes": 843
     },
     {
+      "path": "tools/migration/signal-stack-compat/src/signal_stack/_ocr_compat.py",
+      "sha256": "d217be787136c9baf423c4b427639ca9615a31d4ef803d5609ff6010ce146424",
+      "bytes": 4278
+    },
+    {
+      "path": "tools/migration/signal-stack-compat/src/signal_stack/orchestration/ocr_batch.py",
+      "sha256": "b1502b99d80903c40743539a4f286b9ce4388154bb66bfbb0ea942bf3eac07be",
+      "bytes": 803
+    },
+    {
       "path": "tools/release/build-candidate.py",
-      "sha256": "bd379b65bf89f025305dfc935eca92e2dafba4fde537f53b6cc893ef37770dba",
-      "bytes": 6757
+      "sha256": "ceffba7c8592ea9a517c4a33451835cd80ca162f15c39a2ea61794770e739ca9",
+      "bytes": 6931
     },
     {
       "path": "tools/release/check-diff.py",
@@ -736,8 +746,8 @@
     },
     {
       "path": "tools/release/check-package.py",
-      "sha256": "a044b08ddecae9a3756e3f8d47d4c9c856c82d560e3d0997a914ed24264c192b",
-      "bytes": 5087
+      "sha256": "6402886b39615eda75003273a1e6744b20ea2cc054602e7f4d3bb7e8d37d990d",
+      "bytes": 5500
     },
     {
       "path": "tools/signal-library.py",

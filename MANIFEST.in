@@ -117,6 +117,8 @@ include tools/book-ocr/assemble-book-ocr.py
 include tools/book-ocr/test_assemble_book_ocr.py
 include tools/engine-probe/mise.toml
 include tools/engine-probe/sample.md
+include tools/migration/signal-stack-compat/src/signal_stack/_ocr_compat.py
+include tools/migration/signal-stack-compat/src/signal_stack/orchestration/ocr_batch.py
 include tools/release/build-candidate.py
 include tools/release/check-diff.py
 include tools/release/check-package.py

@@ -16,6 +16,8 @@ DIRECT = ['LICENSE','.github/workflows/check.yml','.github/workflows/i05-ocr-che
           'docs/privacy.md','docs/updates.md','docs/release-status.md','docs/acceptance/agent-onboarding.md','docs/acceptance/agent-trial.md',
           '.agents/skills/signal-library/SKILL.md','.claude/skills/signal-library/SKILL.md',
           'tools/signal-library.py','tools/acceptance/prepare-agent-trial.py','tools/book-ocr/assemble-book-ocr.py','tools/book-ocr/test_assemble_book_ocr.py',
+          'tools/migration/signal-stack-compat/src/signal_stack/_ocr_compat.py',
+          'tools/migration/signal-stack-compat/src/signal_stack/orchestration/ocr_batch.py',
           'tools/engine-probe/mise.toml','tools/engine-probe/sample.md','tools/release/build-candidate.py','tools/release/check-package.py','tools/release/check-diff.py']
 CONTRACTS = ['library-cli','book-registration','ocr-library','ocr-recovery','reading-bundles','curated-markdown',
              'html-export','pdf-export','reading-exports','book-digitization-storage-design']
@@ -73,7 +75,7 @@ def collect(root):
         if name=='mise.local.toml' or (Path.home().as_posix()+'/').encode() in data:
             raise ValueError('候補に端末固有情報があります。')
     files['MANIFEST.in']=('\n'.join('include '+name for name in sorted(files))+'\ninclude candidate-manifest.json\n').encode()
-    manifest={'schema_version':'signal-library-candidate-1','version':'0.1.0.dev0','release_ready':False,
+    manifest={'schema_version':'signal-library-candidate-1','version':'0.1.0.dev1','release_ready':False,
               'license_status':'adopted','license':'MIT','source_text_newlines':'LF','projections':PROJECTIONS,'link_projections':changes,
               'files':[{'path':name,'sha256':sha(data),'bytes':len(data)} for name,data in sorted(files.items())]}
     files['candidate-manifest.json']=(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').encode()
@@ -88,7 +90,7 @@ def build(root,destination):
     stage=destination/'signal-library';stage.mkdir()
     for name,data in files.items():
         target=stage/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
-    archive=destination/'signal-library-0.1.0.dev0-candidate.zip'
+    archive=destination/'signal-library-0.1.0.dev1-candidate.zip'
     with zipfile.ZipFile(archive,'x',compression=zipfile.ZIP_STORED) as bundle:
         for name,data in sorted(files.items()):
             info=zipfile.ZipInfo('signal-library/'+name,date_time=(2026,10,16,0,0,0))
