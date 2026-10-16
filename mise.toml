@@ -1,0 +1,19 @@
+[env]
+# 共有する環境変数はここへ追加する。
+# LIBRARY_ROOTなど端末固有の値・秘密情報はmise.local.tomlの[env]へ置く。
+
+[tools]
+python = "3.12.13"
+
+[tasks.test]
+description = "共通CLIとMarkdown統合補助ツールの回帰テストを実行する"
+run = ["python -m unittest discover -s tests", "python tools/book-ocr/test_assemble_book_ocr.py"]
+
+[tasks.library]
+description = "Signal Library共通CLI"
+run = "python tools/signal-library.py"
+
+[tasks.check]
+description = "回帰テストとGit差分の空白検査を実行する"
+depends = ["test"]
+run = "python tools/release/check-diff.py"

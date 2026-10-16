@@ -1,0 +1,748 @@
+{
+  "schema_version": "signal-library-candidate-1",
+  "version": "0.1.0.dev0",
+  "release_ready": false,
+  "license_status": "adopted",
+  "license": "MIT",
+  "source_text_newlines": "LF",
+  "projections": {
+    "README.md": "docs/distribution/README.md",
+    "AGENTS.md": "docs/distribution/AGENTS.md",
+    "docs/architecture/book-digitization-storage-design.md": "docs/distribution/storage-design.md",
+    "docs/operations/book-digitization-storage-runbook.md": "docs/distribution/book-runbook.md"
+  },
+  "link_projections": [
+    {
+      "file": "docs/architecture/curated-markdown.md",
+      "omitted_target": "../implementation-plan.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/architecture/curated-markdown.md",
+      "omitted_target": "../use-cases.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/architecture/library-cli.md",
+      "omitted_target": "../../worklogs/2026-10-06_i03-initialization.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/architecture/ocr-library.md",
+      "omitted_target": "../../worklogs/2026-10-15_i05-ocr-live-test.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/architecture/ocr-recovery.md",
+      "omitted_target": "../../worklogs/2026-10-16_i06-recovery.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/architecture/pdf-export.md",
+      "omitted_target": "../../worklogs/2026-10-16_i09-pdf.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/architecture/reading-bundles.md",
+      "omitted_target": "../../worklogs/2026-10-16_i07-reading.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/architecture/reading-exports.md",
+      "omitted_target": "gemini-tts-next.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/architecture/reading-exports.md",
+      "omitted_target": "../decisions/i01-ocr-and-export-selection.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/README.md",
+      "omitted_target": "docs/agent-workflow.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/README.md",
+      "omitted_target": "docs/setup.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/README.md",
+      "omitted_target": "docs/release-status.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/README.md",
+      "omitted_target": "THIRD_PARTY_NOTICES.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/README.md",
+      "omitted_target": "SUPPORT.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/README.md",
+      "omitted_target": "docs/updates.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/README.md",
+      "omitted_target": "LICENSE",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/README.md",
+      "omitted_target": "docs/privacy.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/storage-design.md",
+      "omitted_target": "library-cli.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/storage-design.md",
+      "omitted_target": "book-registration.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/storage-design.md",
+      "omitted_target": "reading-bundles.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/storage-design.md",
+      "omitted_target": "pdf-export.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "tools/engine-probe/sample.md",
+      "omitted_target": "figure.svg",
+      "replacement": "../../docs/release-status.md"
+    }
+  ],
+  "files": [
+    {
+      "path": ".agents/skills/signal-library/SKILL.md",
+      "sha256": "425d01cebd09e9d4cc5d986e94e0849796d94030990e8cbde529e0610ec12198",
+      "bytes": 1374
+    },
+    {
+      "path": ".claude/skills/signal-library/SKILL.md",
+      "sha256": "7276220d14b2dd246b764d1d5d702d64dfdfc354451ba37c7c3f4423b243d496",
+      "bytes": 446
+    },
+    {
+      "path": ".github/workflows/check.yml",
+      "sha256": "fadf4b9501ad4c75c8b7003b48a423ca16698608517944b43d16b79fbfc2fc21",
+      "bytes": 599
+    },
+    {
+      "path": ".github/workflows/i05-ocr-check.yml",
+      "sha256": "429eaeca98e408a5873ef6135b466d0b8a0d25e5fc39ad291a6f79118cf71d82",
+      "bytes": 1100
+    },
+    {
+      "path": ".github/workflows/i08-export-check.yml",
+      "sha256": "d883637b185695117ee424a9106ccd92d7546e9276a7137d6539cc8f2038fdc5",
+      "bytes": 954
+    },
+    {
+      "path": ".github/workflows/i09-export-check.yml",
+      "sha256": "737f70ff64f1260c2e4bda52c088fbd5aa420656f41bc29a37fd293c5d6c0302",
+      "bytes": 2019
+    },
+    {
+      "path": ".github/workflows/i11-package-check.yml",
+      "sha256": "011e0be27a1c6870c1ae8a2222fba9ba0d7a3f0ecdfa650f7fbd1bbf707b0f85",
+      "bytes": 1361
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "5d9e9640a94bbd2d5e6dafe22a8c6f25470d9c4efbf7c9c42139823e7b223306",
+      "bytes": 454
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "991bb49412ef6613bdd79e1f01679b8ee6b0ff198506830c0a51924e600044a8",
+      "bytes": 1127
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "06d29819826289bac60a1fc00567df150a0d946a279af35397ee31b3c1ef8a85",
+      "bytes": 168
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "f4288012031d7db210a062f06d01b678675068087c5e30feecc221604810da85",
+      "bytes": 1068
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "f27494911a45f8580bbeb66f88f7b1704e2c63d31f5250111faee2da666d6164",
+      "bytes": 4902
+    },
+    {
+      "path": "README.md",
+      "sha256": "a942c92cf0fccba3b52f32f45eba3d79cd17ba585ddf7cd8e63b4ad869d1c6e0",
+      "bytes": 3512
+    },
+    {
+      "path": "SUPPORT.md",
+      "sha256": "72e70d6136d36892e52658bbe937369136a31979445c5746c3af0e572044bc4a",
+      "bytes": 902
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "8bcb92589bb59f717df3cc3c2b84743adbf293a9a0cf23af4b51866fc6f1b6bf",
+      "bytes": 2379
+    },
+    {
+      "path": "docs/acceptance/agent-onboarding.md",
+      "sha256": "c5019d475970c04bb70848dc72308ac81808f6f158347668caf97ebbbce41282",
+      "bytes": 8359
+    },
+    {
+      "path": "docs/acceptance/agent-trial.md",
+      "sha256": "55d40b279af41925709bd381f2be164f59867a6c8a6c4dafc4f2b2d796de0955",
+      "bytes": 6843
+    },
+    {
+      "path": "docs/agent-workflow.md",
+      "sha256": "2ed5bcaf993510316614ef8314a506101db882019b83147b19fdd8e3a08a986b",
+      "bytes": 6099
+    },
+    {
+      "path": "docs/architecture/book-digitization-storage-design.md",
+      "sha256": "0eeb40c45ab5afb02149bd29f597a9cfd68ef400e89884c3312c7aa867b7c68c",
+      "bytes": 1693
+    },
+    {
+      "path": "docs/architecture/book-registration.md",
+      "sha256": "1151dc3faf0f70c27c6e1944a4cc205a692f2ca560fc72d60a089a34423fe821",
+      "bytes": 6521
+    },
+    {
+      "path": "docs/architecture/curated-markdown.md",
+      "sha256": "7a2cf2ed4a4240c6b87f0c75d645b4db25724dc92138faaf01d3bcde8f5be204",
+      "bytes": 5828
+    },
+    {
+      "path": "docs/architecture/html-export.md",
+      "sha256": "b9963302bb137a50caf92d59db36efaba0e99062be25d7dc22bd05b4d110683f",
+      "bytes": 8047
+    },
+    {
+      "path": "docs/architecture/library-cli.md",
+      "sha256": "eeeda7c169f5e3149102284feb25b37d57277672735f1f7ef691b064d5bfc1d5",
+      "bytes": 7349
+    },
+    {
+      "path": "docs/architecture/ocr-library.md",
+      "sha256": "eecb42a8efca95c1764a06ccc689dba28173aa352f40b71e5677c969b541a2be",
+      "bytes": 5947
+    },
+    {
+      "path": "docs/architecture/ocr-recovery.md",
+      "sha256": "a793535603df70cb797f30e51ec32b845f410197993de487395b882aadc209b3",
+      "bytes": 9062
+    },
+    {
+      "path": "docs/architecture/pdf-export.md",
+      "sha256": "efe59b72890ae2f4be46f8d9abb260f47456f85e8e88631cb0c1d908998d716b",
+      "bytes": 7003
+    },
+    {
+      "path": "docs/architecture/reading-bundles.md",
+      "sha256": "ad126158ac9bb7a94148e9b737cc25a8f71754f90c6803e7f8e9f62d9465fca4",
+      "bytes": 6277
+    },
+    {
+      "path": "docs/architecture/reading-exports.md",
+      "sha256": "43946985d7fcded3f6e7173676f3e69e1c6499f9b8962e54ef04f7e19a3a0438",
+      "bytes": 4247
+    },
+    {
+      "path": "docs/dependency-inventory.json",
+      "sha256": "f56d38c69e4f0e4dfdad3ca48a762b3ef2554c0f8bdfce602bb9010cd9b8e7ad",
+      "bytes": 7766
+    },
+    {
+      "path": "docs/distribution/AGENTS.md",
+      "sha256": "991bb49412ef6613bdd79e1f01679b8ee6b0ff198506830c0a51924e600044a8",
+      "bytes": 1127
+    },
+    {
+      "path": "docs/distribution/README.md",
+      "sha256": "cb7edb783cbdff94060183122faa87b4249801c249b7c9692885ebdab69b724f",
+      "bytes": 3546
+    },
+    {
+      "path": "docs/distribution/book-runbook.md",
+      "sha256": "fc9ab507581e6558ce30f21eeaec30aab7a3b3adf3e62e94b6ef6b4514251263",
+      "bytes": 1115
+    },
+    {
+      "path": "docs/distribution/storage-design.md",
+      "sha256": "045c36182b60a391930552792ea6b30ae2d7440721694f4c3e03f778407daffd",
+      "bytes": 1708
+    },
+    {
+      "path": "docs/operations/book-digitization-storage-runbook.md",
+      "sha256": "fc9ab507581e6558ce30f21eeaec30aab7a3b3adf3e62e94b6ef6b4514251263",
+      "bytes": 1115
+    },
+    {
+      "path": "docs/privacy.md",
+      "sha256": "f3c1b6ec7091b8b4f14a2c512d255fe8b125fd15ff595fda542e84cd5bb4f4ef",
+      "bytes": 1836
+    },
+    {
+      "path": "docs/release-status.md",
+      "sha256": "6549a7b627d5bd13719927969ca860e446dca951b9e8b5889bed64ae4558a242",
+      "bytes": 4835
+    },
+    {
+      "path": "docs/setup.md",
+      "sha256": "6029b64b905faa564cd8d92213fca740832a59c0c5c421f14e7f7ea2637505fa",
+      "bytes": 8390
+    },
+    {
+      "path": "docs/updates.md",
+      "sha256": "5bfa3d7c3030105fb1830051a46db48a30c4de643b4b8368f918cb01fe66721d",
+      "bytes": 1360
+    },
+    {
+      "path": "mise.local.toml.example",
+      "sha256": "3743b3d2cc36a223f52a970195b1c9dfe1a197b0bf8490792c014ffc5001be68",
+      "bytes": 412
+    },
+    {
+      "path": "mise.toml",
+      "sha256": "4f56f5b3b55efd927b8dc65ae319358f16cc8de2658ddb368acf5eb8539a4d42",
+      "bytes": 630
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "03413277ca43a7204d5a9b24dc62e488578c4d7b9167843072effd99e75ff09d",
+      "bytes": 510
+    },
+    {
+      "path": "requirements/build-test.txt",
+      "sha256": "b127a5ec69130665978499e3036af5d74f1b764bed54c22435987ff6885b83be",
+      "bytes": 183
+    },
+    {
+      "path": "requirements/ocr-constraints.txt",
+      "sha256": "88f3198aaea9b0e17a2dd204c5f6996ce3d3989e50cdb8205eb4f3e257d4786f",
+      "bytes": 493
+    },
+    {
+      "path": "requirements/pdf-test.txt",
+      "sha256": "4b67be9b953f9a1fb5d53794b73cc1f7c8244347b645ea87a730729af89211e9",
+      "bytes": 106
+    },
+    {
+      "path": "src/signal_library/__init__.py",
+      "sha256": "c7c6aad7318c52c9032d5d79ad890e7c4e25777d515d77cecc472508bed32abe",
+      "bytes": 64
+    },
+    {
+      "path": "src/signal_library/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "bytes": 48
+    },
+    {
+      "path": "src/signal_library/artifacts.py",
+      "sha256": "e10c4dac55ab284fbc1cf013ade27e63252aa3acb33ac8d27b716b4a66b798be",
+      "bytes": 2109
+    },
+    {
+      "path": "src/signal_library/cli.py",
+      "sha256": "2c01ea65a6db4ee939dfec8db581b4c6e59ca3b857eafdfcd5f28bf64df4849e",
+      "bytes": 17645
+    },
+    {
+      "path": "src/signal_library/credentials.py",
+      "sha256": "0529f0513907432b86e5d5ddaf2f1dccd15f6ec1d89216b791df9ec536714141",
+      "bytes": 5249
+    },
+    {
+      "path": "src/signal_library/diagnostics.py",
+      "sha256": "5abfe59e7b785718753d7b78a76cd3558f8a9b6a0f3d1f264358f912d00d42f3",
+      "bytes": 6591
+    },
+    {
+      "path": "src/signal_library/exports/__init__.py",
+      "sha256": "29b6a23d4d5a70be48eaaf21a9964ef1ed97c2a9669bea2e4e494fcec4bc7d9b",
+      "bytes": 55
+    },
+    {
+      "path": "src/signal_library/exports/checks.py",
+      "sha256": "26c8854e6c37386124b2b39c37bae25b119bcd3291dd9689f52cb91af7db11cf",
+      "bytes": 6565
+    },
+    {
+      "path": "src/signal_library/exports/engine.py",
+      "sha256": "8e8aa0f28a95bde6c10da0345b18091204c6741f429844c78324a128f821c126",
+      "bytes": 12401
+    },
+    {
+      "path": "src/signal_library/exports/fonts.py",
+      "sha256": "7c2193d47ba20af711bc64b0d01c61a4304e68cac0846c30232bf4be75e964f5",
+      "bytes": 3481
+    },
+    {
+      "path": "src/signal_library/exports/html.py",
+      "sha256": "beb7d1b8bbfbb029d42961eb2c70cc2ee7b0694c95ff31a7f4050c1e0a308b9a",
+      "bytes": 8095
+    },
+    {
+      "path": "src/signal_library/exports/images.py",
+      "sha256": "87a045fb4ad71eedfb7760e2e82985ad3baff40fc0580b548ce56c5d2e45d0c9",
+      "bytes": 3673
+    },
+    {
+      "path": "src/signal_library/exports/inputs.py",
+      "sha256": "ea23ea67020e39563a0709f8f1377e60d8b3788e59777016faaffdb892a54bd5",
+      "bytes": 4082
+    },
+    {
+      "path": "src/signal_library/exports/library.py",
+      "sha256": "5eb59e9bb5cd68cd2d2b8a16a36eed8b5eaaccbc77834f6d0f5f1df2393ec031",
+      "bytes": 11022
+    },
+    {
+      "path": "src/signal_library/exports/lifecycle.py",
+      "sha256": "24b7749d4dfc3bd61b0ea5816b97627d41d8e989001f6bbd4c1e0958a5186b57",
+      "bytes": 3475
+    },
+    {
+      "path": "src/signal_library/exports/pdf.py",
+      "sha256": "288148a9dec1e6008ebe71ee528b035320f60f4afb14fef0e8107b46de96065d",
+      "bytes": 7609
+    },
+    {
+      "path": "src/signal_library/exports/publication.py",
+      "sha256": "37a122f229ad784f431755cfe7cf9f27b415471a1326d0743b070597e810dc0f",
+      "bytes": 2611
+    },
+    {
+      "path": "src/signal_library/exports/typst.py",
+      "sha256": "072308a3f5639d7421fa07565a7d1492e550e327b4af07c7e011aaa605af360a",
+      "bytes": 2501
+    },
+    {
+      "path": "src/signal_library/initialization.py",
+      "sha256": "456a8ff14e0232f370cb9807acafe167c13679346a2a244b52c8cd609bf5002c",
+      "bytes": 6904
+    },
+    {
+      "path": "src/signal_library/ocr/__init__.py",
+      "sha256": "7be11afc34b90fa2c48f97fe3fc59db353227cd7ed4a77434fe341c47e4bb934",
+      "bytes": 87
+    },
+    {
+      "path": "src/signal_library/ocr/bindings.py",
+      "sha256": "b13b33d3c4c49f391a3976a1b5e5ae9c81edf4ca09a0919a31ca1cb9e58dea5f",
+      "bytes": 10588
+    },
+    {
+      "path": "src/signal_library/ocr/compat_runner.py",
+      "sha256": "2a125770aaeb8d625bfda41a96b5e0d30b33d74fa6a8f24cf50025f445e4de52",
+      "bytes": 3444
+    },
+    {
+      "path": "src/signal_library/ocr/domain.py",
+      "sha256": "7211606eca051ba4e63f0109870bfed6e121ebad2d94f0d727452cc13a2608bc",
+      "bytes": 6992
+    },
+    {
+      "path": "src/signal_library/ocr/errors.py",
+      "sha256": "1edbaaa309c5ade26f07ad01498c26860a0e69a2f6460ee1ba01fe774893907b",
+      "bytes": 107
+    },
+    {
+      "path": "src/signal_library/ocr/files.py",
+      "sha256": "d274be74a8f8828d6162ffa148f86dd73112bc9f7a35451d5179dbf1dd5ea093",
+      "bytes": 2028
+    },
+    {
+      "path": "src/signal_library/ocr/gateway.py",
+      "sha256": "e0d39bb6d4296b062b5b7569a2d6557d562cc039acd6ad93d6aff238ef460619",
+      "bytes": 4113
+    },
+    {
+      "path": "src/signal_library/ocr/library.py",
+      "sha256": "c109f13107194f8050d3dc1f4cc58262d5835eeabbcd4a771ae852908e984473",
+      "bytes": 16280
+    },
+    {
+      "path": "src/signal_library/ocr/manifest.py",
+      "sha256": "691723effaa676d67a1bf7b636445290f35183347a9e10e19d7c736d8cff8db2",
+      "bytes": 2123
+    },
+    {
+      "path": "src/signal_library/ocr/options.py",
+      "sha256": "695ca0123c2a2d0b2b45f4174b320712d4f873adcf2bd705923014dd63d2711e",
+      "bytes": 1449
+    },
+    {
+      "path": "src/signal_library/ocr/recovery.py",
+      "sha256": "bf2089d8eff3c7df44f9e2157d0d773b543c8bbc0e1a0cdfaed9477b60e67065",
+      "bytes": 13405
+    },
+    {
+      "path": "src/signal_library/ocr/results.py",
+      "sha256": "8f51dd5646a6df42812dac077da264a3b0cf8200ad727d9fbf720a0f22bf0926",
+      "bytes": 13091
+    },
+    {
+      "path": "src/signal_library/ocr/workflow.py",
+      "sha256": "addf371eda40ca183edbf28963ec164fdff399033f267673c3968378bfca9fab",
+      "bytes": 25327
+    },
+    {
+      "path": "src/signal_library/presentation.py",
+      "sha256": "b874dc8f646c75f589f4598ae884720b1d5ba180c670b3d6173180f7d0fd437f",
+      "bytes": 3128
+    },
+    {
+      "path": "src/signal_library/reading/__init__.py",
+      "sha256": "68465f33c9894e4ce8b9f866a8c8cf3777190e4e0be5f794e49db812013aca39",
+      "bytes": 58
+    },
+    {
+      "path": "src/signal_library/reading/assembly.py",
+      "sha256": "fa363ff1707d38fe0281af67009af65354557656e68a751e6a924be648dc4204",
+      "bytes": 8700
+    },
+    {
+      "path": "src/signal_library/reading/bundle.py",
+      "sha256": "def04cd217ce81cf22d3f03a94d685b336853265209eadcac732dd15ad895b0d",
+      "bytes": 9214
+    },
+    {
+      "path": "src/signal_library/reading/formatting.py",
+      "sha256": "d1ae923ed4c9049fc570376399b85636712b8b61c56904b80e08e796da114a54",
+      "bytes": 15486
+    },
+    {
+      "path": "src/signal_library/reading/library.py",
+      "sha256": "ff4ad51a193567f2de0f7604e9ac8abe8379882c8d8ad2cce41ea0fbe2a275ad",
+      "bytes": 9969
+    },
+    {
+      "path": "src/signal_library/reading/review.py",
+      "sha256": "b8464331ae8f5189397b8ee6766a6cd09a7a49fafb7ece2ab5ca0a2a85c698e1",
+      "bytes": 13095
+    },
+    {
+      "path": "src/signal_library/registration.py",
+      "sha256": "2e5259de87e097a46f1067df197aeeadc0fe2d93842df1fc9a1ce4112e6bbc9a",
+      "bytes": 36164
+    },
+    {
+      "path": "src/signal_library/storage.py",
+      "sha256": "795b293d550c43c07154a2db8db62229068b8452e8fe390955f1c0e78ade38b2",
+      "bytes": 2408
+    },
+    {
+      "path": "templates/book-library/README.md",
+      "sha256": "706977187ca4aa4ec6be4df4e9de67073e8cfa621f5d57a34457cf6d9eb36bbf",
+      "bytes": 5116
+    },
+    {
+      "path": "templates/book-library/book.json",
+      "sha256": "94c9d58efa77cb2051ff6c855e01b54593432e27ba3f052070f31fe521133417",
+      "bytes": 856
+    },
+    {
+      "path": "templates/book-library/catalog.csv",
+      "sha256": "ac5f631defed8071201814fcd82120a487527cb27b3184acb2969e427f8b7b25",
+      "bytes": 85
+    },
+    {
+      "path": "templates/book-library/checks.md",
+      "sha256": "bd3b11936bdd7adfe9f926dd146154a824d16721f10f89c13e480aa604af5d00",
+      "bytes": 578
+    },
+    {
+      "path": "templates/book-library/corrections.csv",
+      "sha256": "0c667fda07a98c64e062abd2bf8d8a7120ed51b9ea0722b66e6343647930aa05",
+      "bytes": 102
+    },
+    {
+      "path": "templates/book-library/exports.csv",
+      "sha256": "db1f899ca3f1bd48d5deac7cce6ce6c2915fc5762dc207b5e632cb6ca1287902",
+      "bytes": 134
+    },
+    {
+      "path": "templates/book-library/pages.csv",
+      "sha256": "be4190723f5b5f6e8f949c0635d116a5bdc446c6ef63b5ed0e6480035244fe97",
+      "bytes": 83
+    },
+    {
+      "path": "templates/book-library/pilot-checklist.md",
+      "sha256": "207c776040294c9e2b2244ab1277a3b92a8eb4b974f37ea6c20f3f05d26c5fb5",
+      "bytes": 1469
+    },
+    {
+      "path": "templates/book-library/registration-plan.example.json",
+      "sha256": "040e6bb42922137fc8926d3cbe06cd5076016f8144ccd99807004a148c0576ad",
+      "bytes": 503
+    },
+    {
+      "path": "templates/book-library/review.csv",
+      "sha256": "c16ecdc8cc9626cee67ba9628cd16d6780b549c873064f8f150c3554ed74dce9",
+      "bytes": 81
+    },
+    {
+      "path": "tests/test_agent_setup.py",
+      "sha256": "86b46835ecb6c6ba72b8b65c83d0e376b1e1f1f50eb4770fd5ae542448e07a6b",
+      "bytes": 4504
+    },
+    {
+      "path": "tests/test_agent_trial.py",
+      "sha256": "a4a02d861a0c9ccbd84db78a98b73ab2bed93bd1214eaa6b5ed4463f2a80b66e",
+      "bytes": 2613
+    },
+    {
+      "path": "tests/test_credentials.py",
+      "sha256": "343db5287d2528ec2951f24b87ffaa2821cadab2221742eb0243e4a55b637042",
+      "bytes": 5407
+    },
+    {
+      "path": "tests/test_distribution.py",
+      "sha256": "80e574b11af152591a56831a2663785123edabff2546d248f6ec3aa7899b7e28",
+      "bytes": 6878
+    },
+    {
+      "path": "tests/test_export_html.py",
+      "sha256": "c255709726df013408e532d33e598480c859ad0ea71a000bf4d4057ccedea31c",
+      "bytes": 20277
+    },
+    {
+      "path": "tests/test_export_pdf.py",
+      "sha256": "4b4fc85fbe7741c2d38aecd81119abdd590ad75fc70823ff34de00b7c7423856",
+      "bytes": 13652
+    },
+    {
+      "path": "tests/test_initialization_boundaries.py",
+      "sha256": "c0f77e994937263496038d62b623856f324ed7da9afed962568f30e38c4504fb",
+      "bytes": 7357
+    },
+    {
+      "path": "tests/test_library.py",
+      "sha256": "0c7250f338171fee1365a776bfbf610636f3834601422f9e8ebcb892bcc78185",
+      "bytes": 6549
+    },
+    {
+      "path": "tests/test_ocr_bindings.py",
+      "sha256": "3fad0b333601d3ec1e4272de092095eccd7b9e96da5b5d9eeba9b53b1e11956b",
+      "bytes": 10477
+    },
+    {
+      "path": "tests/test_ocr_compat.py",
+      "sha256": "aa6c140255d367527aae4990b107fb9b72267c5945c264c76dbd707ebefe5d50",
+      "bytes": 3607
+    },
+    {
+      "path": "tests/test_ocr_library.py",
+      "sha256": "0464df698b4313f2fcfd36a503868cc2fdb17c10acbffe6c8f2b39d568714733",
+      "bytes": 8356
+    },
+    {
+      "path": "tests/test_ocr_migrated.py",
+      "sha256": "5cb8ada7f40140af5ae1015f9b8b2bf14ee6b1798dafbb196347da21caefc34c",
+      "bytes": 11693
+    },
+    {
+      "path": "tests/test_ocr_recovery.py",
+      "sha256": "50f4c3683e24fa3fbd1a20f2be57cf2beac2e7097b2f4470ec7bb572a582bcf2",
+      "bytes": 18199
+    },
+    {
+      "path": "tests/test_ocr_results_migrated.py",
+      "sha256": "d588484050153ecc500c6061ce0e98b6fc944434b9c608bc6950b233701ae106",
+      "bytes": 3726
+    },
+    {
+      "path": "tests/test_ocr_sdk.py",
+      "sha256": "1673abe6edda2edc1755f96b01697701135acb8e763e493eeae455201017d30a",
+      "bytes": 4311
+    },
+    {
+      "path": "tests/test_presentation.py",
+      "sha256": "68fd067abb31434276027aeaf68c78150d45ba156d3096405006c9ee83202074",
+      "bytes": 1894
+    },
+    {
+      "path": "tests/test_reading_bundle.py",
+      "sha256": "d7a7bee09d1858eb9e417cbf29c3fc739583a4f1e110c958af4f52bea73f1798",
+      "bytes": 7937
+    },
+    {
+      "path": "tests/test_reading_formatting.py",
+      "sha256": "16ea2f6c8d0abe32027bb5dfd37e7ab7edc5bf6c4b43e900e668115ac68c9059",
+      "bytes": 7536
+    },
+    {
+      "path": "tests/test_reading_library.py",
+      "sha256": "7d0fbbff91e59de20a608bba449f71459874a11437e71cc11d90e007e890b871",
+      "bytes": 11904
+    },
+    {
+      "path": "tests/test_registration.py",
+      "sha256": "becc22d32117150bb9596feba86e0cc1932a3675f416640da32033c3fd334006",
+      "bytes": 15772
+    },
+    {
+      "path": "tools/acceptance/prepare-agent-trial.py",
+      "sha256": "61db3d6ad33a5bc1023e1f9ed32e9a73231f45e3e8a2e8b3d1bf45b2eb0e515d",
+      "bytes": 8052
+    },
+    {
+      "path": "tools/book-ocr/assemble-book-ocr.py",
+      "sha256": "2fe388698c30e6e6d826c6c242763abebd2ed8a1340ceaa0863e5ad3b461d430",
+      "bytes": 266
+    },
+    {
+      "path": "tools/book-ocr/test_assemble_book_ocr.py",
+      "sha256": "1a429bb8c6c165fc10954328d8251e468abceb851c5362d697d0ea6c6bfc8c41",
+      "bytes": 5305
+    },
+    {
+      "path": "tools/engine-probe/mise.toml",
+      "sha256": "e0f6c7018c2b8d567a0e5a7fcf5de950ba297fe9ac1661eb855e4f31d8ea82a7",
+      "bytes": 60
+    },
+    {
+      "path": "tools/engine-probe/sample.md",
+      "sha256": "cd9e9c0083de4d79d17c975c3bcf529dd1d570434fcaa018ba2198a2889b4297",
+      "bytes": 843
+    },
+    {
+      "path": "tools/release/build-candidate.py",
+      "sha256": "bd379b65bf89f025305dfc935eca92e2dafba4fde537f53b6cc893ef37770dba",
+      "bytes": 6757
+    },
+    {
+      "path": "tools/release/check-diff.py",
+      "sha256": "0b419a6b08ae3d908da76ac724576234775d4621d4dae1b39f3eac809fa8b442",
+      "bytes": 1442
+    },
+    {
+      "path": "tools/release/check-package.py",
+      "sha256": "a044b08ddecae9a3756e3f8d47d4c9c856c82d560e3d0997a914ed24264c192b",
+      "bytes": 5087
+    },
+    {
+      "path": "tools/signal-library.py",
+      "sha256": "b5ec74d19c7d679d6a301dcec444abffb42bd3ab8b23f384a98ca65d5b8e5786",
+      "bytes": 270
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+[tools]
+python = "3.12.13"
+pandoc = "3.12"
+typst = "0.15.1"

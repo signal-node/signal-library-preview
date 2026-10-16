@@ -1,0 +1,18 @@
+{
+  "schema_version": "signal-library-registration-1",
+  "metadata": {
+    "title": "人工サンプル（実書名へ置き換える）",
+    "contributors": [],
+    "edition": "",
+    "language": "ja",
+    "scope": "",
+    "bibliography_unknowns": ["著者・版・取得範囲は未確認"]
+  },
+  "capture_id": "capture-001",
+  "order_confirmed": false,
+  "images": [
+    {"path": "入力/表紙.png", "scope": "表紙"},
+    {"path": "入力/本文.jpg", "scope": "本文"}
+  ],
+  "markdown": []
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "book-library-1",
+  "status": "draft",
+  "book_id": "",
+  "title": "",
+  "contributors": [],
+  "edition": "",
+  "volume": null,
+  "publisher": null,
+  "publication_year": null,
+  "isbn": null,
+  "language": "",
+  "bibliography_evidence": [],
+  "bibliography_unknowns": [],
+  "acquisition_method": "",
+  "scope": "",
+  "sensitivity": null,
+  "use_scope": "",
+  "service_permissions": {
+    "dropbox": "pending",
+    "mistral": "pending",
+    "notion": "pending",
+    "notebooklm": "pending",
+    "chatgpt": "pending",
+    "third_party_sharing": "pending"
+  },
+  "permission_notes": [],
+  "originals": [],
+  "ocr_runs": [],
+  "curated_revisions": [],
+  "active_reading": {
+    "kind": null,
+    "id": null,
+    "path": null
+  },
+  "page_map_path": "",
+  "exports_path": "",
+  "created_at": null,
+  "updated_at": null,
+  "aliases": []
+}

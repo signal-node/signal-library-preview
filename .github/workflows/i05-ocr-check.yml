@@ -1,0 +1,31 @@
+name: OCR SDK検証
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sdk:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4
+        with:
+          version: 2026.10.2
+          install_args: python
+      - name: 隔離環境へOCR extraを導入し通信なしでSDKを検証
+        shell: bash
+        run: |
+          mise exec -- python -m venv .venv
+          mise exec -- python - <<'PY'
+          import os, subprocess
+          from pathlib import Path
+          interpreter = Path('.venv') / ('Scripts/python.exe' if os.name == 'nt' else 'bin/python')
+          subprocess.run([str(interpreter), '-m', 'pip', 'install', '-c', 'requirements/ocr-constraints.txt', '.[ocr]'], check=True)
+          subprocess.run([str(interpreter), '-m', 'unittest', 'discover', '-s', 'tests'], check=True)
+          PY

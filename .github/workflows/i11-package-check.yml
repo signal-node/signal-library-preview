@@ -1,0 +1,39 @@
+name: 配布候補検証
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4
+        with:
+          version: 2026.10.2
+          install_args: python
+      - name: 隔離環境へ固定ビルド依存を導入
+        shell: bash
+        run: |
+          mise exec -- python -m venv .venv-package
+          mise exec -- python - <<'PY'
+          import os, subprocess
+          from pathlib import Path
+          python=Path('.venv-package')/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
+          subprocess.run([str(python),'-m','pip','install','-r','requirements/build-test.txt'],check=True)
+          PY
+      - name: 候補だけからbuild/install/CLIを検証
+        shell: bash
+        run: |
+          mise exec -- python - <<'PY'
+          import os,subprocess
+          from pathlib import Path
+          python=Path('.venv-package')/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
+          subprocess.run([str(python),'tools/release/check-package.py'],check=True)
+          PY

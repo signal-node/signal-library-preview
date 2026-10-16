@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "signal-library"
+version = "0.1.0.dev0"
+description = "書籍の登録・OCR・校正・読書用HTML/PDFを管理するローカルツール"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+ocr = ["mistralai==2.7.0"]
+
+[project.scripts]
+signal-library = "signal_library.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

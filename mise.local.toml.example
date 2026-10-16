@@ -1,0 +1,6 @@
+# mise.local.tomlへコピーし、必要な値を設定する。実ファイルはGit対象外。
+[env]
+# 利用者のBooksの絶対パスを指定する（空欄のまま有効化しない）。
+# LIBRARY_ROOT = ""
+# Windowsでは 'C:\Users\example\Dropbox\Books' のように単一引用符を使える。
+# Mistralキーは利用者の端末で mise run library -- configure-key --json から設定する。

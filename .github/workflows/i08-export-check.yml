@@ -1,0 +1,29 @@
+name: HTML engine検証
+on:
+  push:
+    branches: ['codex/i08-html-validation']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  html:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: tools/engine-probe
+        shell: bash
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4
+        with:
+          version: 2026.10.2
+          working_directory: tools/engine-probe
+          install_args: python pandoc
+      - name: 実エンジンを必須として境界・生成処理を検証
+        run: |
+          PYTHONPATH=../../src python -c 'from signal_library.exports.engine import Pandoc; print(Pandoc().version)'
+          python -m unittest discover -s ../../tests -p test_export_html.py
