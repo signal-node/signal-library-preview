@@ -14,6 +14,7 @@ include SUPPORT.md
 include THIRD_PARTY_NOTICES.md
 include docs/acceptance/agent-onboarding.md
 include docs/acceptance/agent-trial.md
+include docs/acceptance/release-0.1.0.md
 include docs/agent-workflow.md
 include docs/architecture/book-digitization-storage-design.md
 include docs/architecture/book-registration.md
@@ -25,11 +26,14 @@ include docs/architecture/ocr-recovery.md
 include docs/architecture/pdf-export.md
 include docs/architecture/reading-bundles.md
 include docs/architecture/reading-exports.md
+include docs/changelog.md
+include docs/decisions/initial-release-acceptance.md
 include docs/dependency-inventory.json
 include docs/distribution/AGENTS.md
 include docs/distribution/README.md
 include docs/distribution/book-runbook.md
 include docs/distribution/storage-design.md
+include docs/known-limitations.md
 include docs/operations/book-digitization-storage-runbook.md
 include docs/privacy.md
 include docs/release-status.md

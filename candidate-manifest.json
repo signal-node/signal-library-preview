@@ -1,6 +1,6 @@
 {
   "schema_version": "signal-library-candidate-1",
-  "version": "0.1.0.dev1",
+  "version": "0.1.0",
   "release_ready": false,
   "license_status": "adopted",
   "license": "MIT",
@@ -12,6 +12,21 @@
     "docs/operations/book-digitization-storage-runbook.md": "docs/distribution/book-runbook.md"
   },
   "link_projections": [
+    {
+      "file": "docs/acceptance/agent-onboarding.md",
+      "omitted_target": "../../worklogs/i10-codex-ocr-curation-acceptance.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/acceptance/agent-onboarding.md",
+      "omitted_target": "../../worklogs/i10-codex-ocr-safety-acceptance.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/acceptance/agent-onboarding.md",
+      "omitted_target": "../decisions/initial-release-acceptance-proposal.md",
+      "replacement": "../release-status.md"
+    },
     {
       "file": "docs/architecture/curated-markdown.md",
       "omitted_target": "../implementation-plan.md",
@@ -58,6 +73,16 @@
       "replacement": "../release-status.md"
     },
     {
+      "file": "docs/decisions/initial-release-acceptance.md",
+      "omitted_target": "initial-release-acceptance-proposal.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/README.md",
+      "omitted_target": "docs/known-limitations.md",
+      "replacement": "../release-status.md"
+    },
+    {
       "file": "docs/distribution/README.md",
       "omitted_target": "docs/agent-workflow.md",
       "replacement": "../release-status.md"
@@ -69,7 +94,12 @@
     },
     {
       "file": "docs/distribution/README.md",
-      "omitted_target": "docs/release-status.md",
+      "omitted_target": "docs/known-limitations.md",
+      "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/distribution/README.md",
+      "omitted_target": "docs/acceptance/release-0.1.0.md",
       "replacement": "../release-status.md"
     },
     {
@@ -116,6 +146,21 @@
       "file": "docs/distribution/storage-design.md",
       "omitted_target": "pdf-export.md",
       "replacement": "../release-status.md"
+    },
+    {
+      "file": "docs/release-status.md",
+      "omitted_target": "../worklogs/i10-codex-ocr-curation-acceptance.md",
+      "replacement": "release-status.md"
+    },
+    {
+      "file": "docs/release-status.md",
+      "omitted_target": "../worklogs/i10-codex-ocr-safety-acceptance.md",
+      "replacement": "release-status.md"
+    },
+    {
+      "file": "docs/release-status.md",
+      "omitted_target": "decisions/initial-release-acceptance-proposal.md",
+      "replacement": "release-status.md"
     },
     {
       "file": "tools/engine-probe/sample.md",
@@ -181,18 +226,18 @@
     },
     {
       "path": "MANIFEST.in",
-      "sha256": "69d1b7f6eab3bcf18c32319e0c0ff3353aaf63f9e8b56d14cb01be600218768a",
-      "bytes": 5066
+      "sha256": "394200addfc3413b06094ba950665ecf21d23a96684530d489dc49e7fd42c7e3",
+      "bytes": 5220
     },
     {
       "path": "README.md",
-      "sha256": "391e3bc9a6720669f6eded37a5ab84fe9f1c42a997f26139ffa93c89a0ad9990",
-      "bytes": 3512
+      "sha256": "9765f2cb8164c853cadbdf20fe3e1dafe4a80d96fc77112537c96a431029ccfb",
+      "bytes": 3698
     },
     {
       "path": "SUPPORT.md",
-      "sha256": "72e70d6136d36892e52658bbe937369136a31979445c5746c3af0e572044bc4a",
-      "bytes": 902
+      "sha256": "c5721423f83d593f664f5ace349544eb9cf35c87a067428d82c1c8d4b8592a15",
+      "bytes": 1157
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -201,13 +246,18 @@
     },
     {
       "path": "docs/acceptance/agent-onboarding.md",
-      "sha256": "c5019d475970c04bb70848dc72308ac81808f6f158347668caf97ebbbce41282",
-      "bytes": 8359
+      "sha256": "cc5f95c720660fcfe3eff7901a37aa0ca1fa6b48841190f520b9c4c977b234d4",
+      "bytes": 14817
     },
     {
       "path": "docs/acceptance/agent-trial.md",
       "sha256": "55d40b279af41925709bd381f2be164f59867a6c8a6c4dafc4f2b2d796de0955",
       "bytes": 6843
+    },
+    {
+      "path": "docs/acceptance/release-0.1.0.md",
+      "sha256": "95ea6e96ad9c1c91c339658a340943c79ce0949b195d38cf3e316dcf73710332",
+      "bytes": 3442
     },
     {
       "path": "docs/agent-workflow.md",
@@ -265,6 +315,16 @@
       "bytes": 4247
     },
     {
+      "path": "docs/changelog.md",
+      "sha256": "4d8f91fbd9dd51dcf26af9cf4f7bb3f8710473826bb05b726dda4db2acf57989",
+      "bytes": 1359
+    },
+    {
+      "path": "docs/decisions/initial-release-acceptance.md",
+      "sha256": "3ba5c2459ec98f6af3413afdc504e58b5c0a0e2b5c9cff3c214f099bc5f3c4e7",
+      "bytes": 1937
+    },
+    {
       "path": "docs/dependency-inventory.json",
       "sha256": "f56d38c69e4f0e4dfdad3ca48a762b3ef2554c0f8bdfce602bb9010cd9b8e7ad",
       "bytes": 7766
@@ -276,8 +336,8 @@
     },
     {
       "path": "docs/distribution/README.md",
-      "sha256": "f9d22dcc69ff105f9f74c37601e53a1ba0c49526b7953a97a0f2b1b220daecdb",
-      "bytes": 3546
+      "sha256": "035371ea45ed14082ff784520584b6255b2213f48d993cbe8c1a9cde77d47dc0",
+      "bytes": 3712
     },
     {
       "path": "docs/distribution/book-runbook.md",
@@ -288,6 +348,11 @@
       "path": "docs/distribution/storage-design.md",
       "sha256": "045c36182b60a391930552792ea6b30ae2d7440721694f4c3e03f778407daffd",
       "bytes": 1708
+    },
+    {
+      "path": "docs/known-limitations.md",
+      "sha256": "55960d69f64963014a429426d362151829ccd432a1c37bd3986d1079b8e8bf42",
+      "bytes": 4298
     },
     {
       "path": "docs/operations/book-digitization-storage-runbook.md",
@@ -301,18 +366,18 @@
     },
     {
       "path": "docs/release-status.md",
-      "sha256": "490f10e14dc78f907cdba75b4699fbafaf4665157be56006bef40dba109dc13c",
-      "bytes": 6009
+      "sha256": "09ccadc99282b5aceb3771e0f5901cac2af34ca87f557c086c7266422486a7fa",
+      "bytes": 9494
     },
     {
       "path": "docs/setup.md",
-      "sha256": "6029b64b905faa564cd8d92213fca740832a59c0c5c421f14e7f7ea2637505fa",
-      "bytes": 8390
+      "sha256": "aba16d78bf374e6e167c9ed3df0ab4005090648e0d3607b19b3fa685a93609ec",
+      "bytes": 8850
     },
     {
       "path": "docs/updates.md",
-      "sha256": "5bfa3d7c3030105fb1830051a46db48a30c4de643b4b8368f918cb01fe66721d",
-      "bytes": 1360
+      "sha256": "b57e5ad5b1447b7d00c29e7ff0d49cfa47dd5721c227d94a8cef8d071af2124a",
+      "bytes": 1502
     },
     {
       "path": "mise.local.toml.example",
@@ -326,8 +391,8 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "b63521b1ff07df6dc4e537128d53a56eee49d2812f643997ab9c10aa88d729a3",
-      "bytes": 510
+      "sha256": "5be4bb08011fde6408dcb112dc82c776946a8268a896895e5960682337c85d38",
+      "bytes": 505
     },
     {
       "path": "requirements/build-test.txt",
@@ -346,8 +411,8 @@
     },
     {
       "path": "src/signal_library/__init__.py",
-      "sha256": "c6b5a3a18c4fa9cc98e44d86f181ab3adaf76d8becfec93e5cf478e794be6609",
-      "bytes": 64
+      "sha256": "3ca1d7124b396f51aee4fc8102e9b2fd7ab7a2378819902a026d1345fed8419b",
+      "bytes": 59
     },
     {
       "path": "src/signal_library/__main__.py",
@@ -736,8 +801,8 @@
     },
     {
       "path": "tools/release/build-candidate.py",
-      "sha256": "ceffba7c8592ea9a517c4a33451835cd80ca162f15c39a2ea61794770e739ca9",
-      "bytes": 6931
+      "sha256": "50d73272ed6488d50c69a60a09878125d4831f9161564b7cd684405f4fc8b39d",
+      "bytes": 7051
     },
     {
       "path": "tools/release/check-diff.py",
@@ -746,8 +811,8 @@
     },
     {
       "path": "tools/release/check-package.py",
-      "sha256": "6402886b39615eda75003273a1e6744b20ea2cc054602e7f4d3bb7e8d37d990d",
-      "bytes": 5500
+      "sha256": "3d386e8374f53949d0b7f3bfcfa618347a0a654238b82004d061736888869725",
+      "bytes": 5480
     },
     {
       "path": "tools/signal-library.py",

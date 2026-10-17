@@ -2,7 +2,7 @@
 
 Signal, Not Volume。書籍の原画像、OCR、校正版と読書用PDF/HTMLを版ごとに管理するローカルツール。
 
-この版は0.1.0.dev1の開発プレビュー。本体はMITライセンスを採用。安定版ではありません。書籍・画像・OCR全文・APIキーは含めない。利用者が自分の保存先とアカウントを使う。外部サービスの公式製品ではない。
+この版は0.1.0の初版（限定サポート）です。本体はMITライセンスを採用。確認環境と未確認事項は[対応範囲](../release-status.md)に記載しています。書籍・画像・OCR全文・APIキーは含めない。利用者が自分の保存先とアカウントを使う。外部サービスの公式製品ではない。
 
 ## 始める
 
@@ -23,7 +23,9 @@ mise run library -- doctor --json
 
 ## 対応範囲と未確認
 
-macOSとWindowsネイティブを対象に開発。CLI/SDK模擬通信/実出力エンジンはmacOS・Windows・Linux CIで検証した。全OS/全ブラウザの互換性を保証したものではない。macOS Codexのキーなし初期化・画像/MD登録・別セッションからの再開・HTML/PDF生成は実対話で確認済み。OCR/校正の新規Agent対話、Claude Code、Windows実端末GUI、Dropboxクラウド同期/再取得の受入は未完了。[受入状態](../release-status.md)を参照。
+macOS/WindowsとCodex/Claude Codeを対象とします。共通CLIは3 OS CIで検証し、macOS Codexはキーなし導入/出力と回収済み人工OCRの整形/校正を実対話で確認しました。人工資料のDropbox同期/Web再取得も確認済みです。
+
+**Windows実端末、Claudeの実対話、実キー設定から新規実OCRまでのAgentによる一巡は未確認です。** 未確認の組合せは実験的対応です。全経路の実Agent受入成功とは扱いません。[未確認事項](../release-status.md)と[受入判定](../release-status.md)を確認してください。
 
 同じ保存先への複数端末同時書込み、複数captureの自動本文統合、Notion/NotebookLM搬送、Gemini TTSは初版対象外。日本語の数式・図表は必ず利用範囲を原典/生成ページと比較する。出力の表示確認も原典照合とは別の記録。
 

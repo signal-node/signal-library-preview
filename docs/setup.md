@@ -1,10 +1,10 @@
 # 利用者の初期設定
 
-対象: macOSとWindowsネイティブ環境。macOSローカルとmacOS/Windows/Linux CIで人工データを検証済み。実Agent端末・Dropbox同期の受入はI-10で行う。OCR正常系/回復、読書版・校正・照合/採用、HTML/PDFと出力版管理まで実装済み。両Agentの入口は[共通手順](agent-workflow.md)、実対話/同期の証拠は[受入記録](acceptance/agent-onboarding.md)。
+対象: macOSとWindowsネイティブ環境。Windows実端末、Claudeの実対話、実キー設定から新規実OCRまでのAgentによる一巡は未確認で、該当する組合せは実験的対応です。[確認環境と未確認事項](known-limitations.md)を先に確認してください。macOSローカルとmacOS/Windows/Linux CIで人工データを検証済み。実Agent端末・Dropbox同期の受入はI-10で行う。OCR正常系/回復、読書版・校正・照合/採用、HTML/PDFと出力版管理まで実装済み。両Agentの入口は[共通手順](agent-workflow.md)、実対話/同期の証拠は[受入記録](acceptance/agent-onboarding.md)。
 
 ## 依存を用意する
 
-Gitとmiseを導入してリポジトリをcloneし、そのルートへ移動する。一般利用にGitHub CLIや所有者のアカウント設定は不要。現在は非公開リポジトリなので取得にはアクセス権が必要。
+Gitとmiseを導入してリポジトリをcloneし、そのルートへ移動する。一般利用にGitHub CLIや所有者のアカウント設定は不要。公開配布先は[signal-library-preview](https://github.com/signal-node/signal-library-preview)。利用するtag/versionと[変更履歴](changelog.md)を確認して取得してください。開発正本の非公開リポジトリへのアクセス権は利用に不要です。
 
 miseがなければ[公式導入手順](https://mise.jdx.dev/installing-mise.html)を使う。WindowsのPowerShellでは`winget install jdx.mise`、macOSでHomebrewを利用している場合は`brew install mise`を使える。これは導入例であり、Agentが暗黙に端末全体へインストールする指示ではない。導入後は必要に応じて端末を開き直し、`mise --version`で確認する。
 

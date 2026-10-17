@@ -38,15 +38,15 @@ def main():
         run([sys.executable,'-m','build','--no-isolation','--outdir',base/'packages'],stage,env)
         wheel=next((base/'packages').glob('*.whl'));sdist=next((base/'packages').glob('*.tar.gz'))
         with zipfile.ZipFile(wheel) as archive:
-            assert archive.read('signal_library-0.1.0.dev1.dist-info/licenses/LICENSE')==files['LICENSE']
-            metadata=archive.read('signal_library-0.1.0.dev1.dist-info/METADATA').decode('utf-8')
+            assert archive.read('signal_library-0.1.0.dist-info/licenses/LICENSE')==files['LICENSE']
+            metadata=archive.read('signal_library-0.1.0.dist-info/METADATA').decode('utf-8')
             assert 'License-Expression: MIT' in metadata and 'License-File: LICENSE' in metadata
-            assert all(name.startswith(('signal_library/','signal_library-0.1.0.dev1.dist-info/')) for name in archive.namelist())
+            assert all(name.startswith(('signal_library/','signal_library-0.1.0.dist-info/')) for name in archive.namelist())
             for name in archive.namelist():
                 if name.startswith('signal_library/'):
                     assert name.endswith('.py') and archive.read(name)==files['src/'+name]
         with tarfile.open(sdist,'r:gz') as archive:
-            members=archive.getmembers();prefix='signal_library-0.1.0.dev1/'
+            members=archive.getmembers();prefix='signal_library-0.1.0/'
             for member in members:
                 assert not member.issym() and not member.islnk()
                 if not member.isfile():continue

@@ -1,6 +1,6 @@
 # 障害報告
 
-配布候補のため常時サポートは約束しない。共有元に、version、OS/CPU、実行したサブコマンド、error_code、期待/実際の状態、人工資料で再現できる手順を伝える。公開後の窓口は公開先と一緒に確定する。
+0.1.0は限定サポートの初版です。[確認環境と未確認事項](docs/known-limitations.md)を確認してください。Windows実端末とClaude実対話等は未確認です。常時サポートは約束しません。共有元に、version、OS/CPU、実行したサブコマンド、error_code、期待/実際の状態、人工資料で再現できる手順を伝える。秘密を含まない不具合は[公開先のIssues](https://github.com/signal-node/signal-library-preview/issues)へ報告できます。
 
 APIキー、mise.local.toml、環境一覧、実書籍の本文/画像、書籍台帳、署名付きURLをIssueやチャットへ添付しない。必要なら人工資料で再現する。パス/書名/ジョブID等も共有する必要性を確認して伏せる。
 
